@@ -1,0 +1,94 @@
+### Create an application
+POST http://localhost:3000/applications HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Google",
+    "subDate": "03-05-2022",
+    "resume": 1,
+    "oa": true,
+    "phone": true,
+    "interview": true,
+    "intDate": "05-04-2022",
+    "offer": true,
+    "amount": 100000,
+    "notes": "Top choice"
+}
+
+
+### Create another application
+POST http://localhost:3000/applications HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Apple",
+    "subDate": "03-10-2022",
+    "resume": 1,
+    "oa": true,
+    "phone": true
+}
+
+
+### Create another application
+POST http://localhost:3000/applications HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Meta",
+    "subDate": "03-17-2022",
+    "resume": 2,
+    "oa": true,
+    "phone": true,
+    "interview": true,
+    "intDate": "06-14-2022"
+}
+
+
+### Create another application
+POST http://localhost:3000/applications HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Netflix",
+    "subDate": "03-21-2022",
+    "resume": 2,
+    "oa": true,
+    "phone": true,
+    "interview": true,
+    "intDate": "05-01-2022",
+    "offer": false,
+    "notes": "Not enough experience"
+}
+
+
+### Retrieve should return the 4 applications we just created
+GET http://localhost:3000/applications HTTP/1.1
+
+
+### Edit the Apple application. 
+### NOTE: Set ID to the ID for Apple
+PUT http://localhost:3000/applications/62a5247f4f3197e2c4e6761f HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Apple",
+    "subDate": "03-10-2022",
+    "resume": 1,
+    "oa": true,
+    "phone": true,
+    "interview": true,
+    "intDate": "06-21-2022"
+}
+
+
+### Verify that Apple app has been updated with interview info
+GET http://localhost:3000/applications HTTP/1.1
+
+
+### Delete the Netflix application
+### NOTE: Set ID to the ID for Netflix
+DELETE http://localhost:3000/applications/62a524484f3197e2c4e6761a HTTP/1.1
+
+
+### Verify that the Netflix application has been deleted
+GET http://localhost:3000/applications HTTP/1.1

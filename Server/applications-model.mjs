@@ -22,7 +22,7 @@ const applicationSchema = mongoose.Schema({
     interview:          {type: Boolean, required: false},
     interviewDate:      {type: String, required: false},
     offerReceived:      {type: Boolean, required: false},
-    offerAmount:        {type: Boolean, required: false},
+    offerAmount:        {type: Number, required: false},
     notes:              {type: String, required: false}
 });
 

@@ -72,4 +72,4 @@ const deleteApp = async (id) => {
     return result.deletedCount;
 }
 
-export{}
+export{ createApp, findApps, replaceApp, deleteApp }

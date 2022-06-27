@@ -6,16 +6,26 @@ This website was created as a tool to track information about submitted applicat
 
 The backend of the site is complete, implemented using Node, Express, and MongoDB/Mongoose. The collection has the following attributes:
 
-- companyName:        {type: String, required: true}
-- submissionDate:     {type: String, required: true}
-- resumeVer:          {type: Number, required: false}
-- onlineAssess:       {type: Boolean, required: false}
-- phoneScreen:        {type: Boolean, required: false}
-- interview:          {type: Boolean, required: false}
-- interviewDate:      {type: String, required: false}
-- offerReceived:      {type: Boolean, required: false}
-- offerAmount:        {type: Number, required: false}
-- notes:              {type: String, required: false}
+- companyName:        
+  - {type: String, required: true}
+- submissionDate:     
+  - {type: String, required: true}
+- resumeVer:          
+  - {type: Number, required: false}
+- onlineAssess:       
+  - {type: Boolean, required: false}
+- phoneScreen:        
+  - {type: Boolean, required: false}
+- interview:          
+  - {type: Boolean, required: false}
+- interviewDate:      
+  - {type: String, required: false}
+- offerReceived:      
+  - {type: Boolean, required: false}
+- offerAmount:        
+  - {type: Number, required: false}
+- notes:              
+  - {type: String, required: false}
 
 Each of the boolean values are intended to be marked True if that particular stage was reached, False if not, and Null if not applicable or not reached yet.
 
